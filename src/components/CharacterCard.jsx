@@ -4,7 +4,7 @@ export const CharacterCard = ({name, gender, hair_color, eye_color}) => {
     return (
        
        <>
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card mt-4" style={{ width: "16rem" }}>
       <img
         src="..."
         className="card-img-top"
@@ -15,7 +15,8 @@ export const CharacterCard = ({name, gender, hair_color, eye_color}) => {
         <h6 className="card-title">Gender: {gender}</h6>
         <h6 className="card-title">Hair Color:{hair_color}</h6>
         <h6 className="card-title">Eye-color:{eye_color}</h6>
-      <div className="d-flex justify-content-between">
+       </div>
+      <div className="card-footer d-flex justify-content-between">
        <Link to="/profilepage">
        <button className="btn btn-primary">Learn more!</button>
        </Link>
@@ -26,7 +27,7 @@ export const CharacterCard = ({name, gender, hair_color, eye_color}) => {
 </div>
       
        </div>
-      </div>
+     
     </div>
        
        
