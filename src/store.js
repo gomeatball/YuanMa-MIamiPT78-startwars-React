@@ -1,26 +1,24 @@
 export const initialStore=()=>{
   return{
-    message: null,
-    todos: [
-      {
-        id: 1,
-        title: "Make the bed",
-        background: null,
-      },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
-    ]
+    count: 0
   }
 }
 
 export default function storeReducer(store, action = {}) {
   switch(action.type){
-    case 'add_task':
+    case 'add_Favorites':
 
-      const { id,  color } = action.payload
+      const {  } = action.payload
+
+      return {
+        ...store,
+        todos: store.todos.map((todo) => (todo.id === id ? { ...todo, background: color } : todo))
+      };
+
+
+      case 'decrease_Favorites':
+
+      const { id,  count } = action.payload
 
       return {
         ...store,
